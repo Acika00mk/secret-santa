@@ -1,0 +1,22 @@
+<%- include ('partials/header', {title: 'Secret santa'}) %>
+
+<main role="main">
+    <section class="jumbotron ">
+        <div class="container">
+            <%= participants.each %>
+            <% participants.forEach(function(user){ %>
+                <div>
+                    <span><%= user.name %></span>
+                    <span><%= user.email %></span>
+                    <span><%= user.address %></span>
+                    <span><%= user.phone %></span>
+                    <span><%= user.number %></span>
+                </div>
+            <% }) %>
+
+            <h2></h2>
+            <a href="/admin/groups/<%= group.id %>/registerParticipant">Register for group : <%= group.name %></a>
+        </div>
+    </section>
+</main>
+<%- include ('partials/footer') %>

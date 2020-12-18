@@ -1,0 +1,45 @@
+<%- include ('partials/header', {title: 'Secret santa'}) %>
+
+<main role="main">
+    <section class="jumbotron ">
+        <div class="container">
+            <h2>Register for group : <%= group.name %></h2>
+            <form method="post" action="/admin/groups/register">
+                <div class="form-group">
+                    <label for="exampleInputEmail1name">Full name </label>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1name"
+                           aria-describedby="nameHelp" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1email">Email address</label>
+                    <input type="email" name="email" class="form-control"
+                           id="exampleInputEmail1email"
+                           aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1address">Address </label>
+                    <textarea type="text" name="address" class="form-control"
+                           id="exampleInputEmail1address"
+                           aria-describedby="addressHelp" placeholder="Enter address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1phone">Phone number </label>
+                    <input type="text" name="phone" class="form-control"
+                           id="exampleInputEmail1phone"
+                           aria-describedby="addressHelp" placeholder="Enter phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="wish1">Christmas wish</label>
+                    <textarea type="text" name="wish" class="form-control"
+                           id="wish1" placeholder="Enter your christams wish"></textarea>
+                </div>
+                <input type="hidden" name="groupId" value="<%= group.id %>">
+                <br/>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+</main>
+<%- include ('partials/footer') %>

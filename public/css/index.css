@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Mountains of Christmas';
+  src: url(../fonts/MountainsofChristmas.ttf);
+}
+
+body {
+
+  background: #de2f32;
+}
+
+.bg-dark {
+  background: #de2f32 !important;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}
+
+h1 {
+  font-family: 'Mountains of Christmas';
+  white-space: nowrap;
+  animation: rock;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+
+.footerImage {
+  margin:  0 auto;
+  height: auto;
+  border: 0;
+  width: 100%;
+  max-width: 680px;
+  display: block;
+}

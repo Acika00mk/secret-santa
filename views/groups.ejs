@@ -1,0 +1,26 @@
+<%- include ('partials/header', {title: 'Groups'}) %>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Welcome to secret santa wheel </h1>
+            <p class="lead text-muted">Enter your details and expect a gift</p>
+        </div>
+    </section>
+
+
+    <section class=" py-5 bg-light">
+        <div class="container">
+        <h2>groups list</h2>
+        <div class="container">
+            <ul>
+                <% groups.forEach(function(group){ %>
+                    <li><a href="/admin/groups/<%= group.id %>"><%= group.name %></a> </li>
+                <% }) %>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+</main>
+<%- include ('partials/footer') %>
